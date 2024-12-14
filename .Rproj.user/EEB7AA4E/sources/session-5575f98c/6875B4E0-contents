@@ -121,8 +121,11 @@ covers <- clean |>
     program = case_when(
       str_detect(code, "BHR") ~ "BACHELOR OF HUMAN RESOURCES MANAGEMENT",
       str_detect(code, "PPM|BPM") ~ "BACHELOR OF PROJECT PLANNING & MANAGEMENT",
-      str_detect(code, "ECO") ~ "BACHELOR OF ECONOMICS",
+      str_detect(code, "ECO|BEN") ~ "BACHELOR OF ECONOMICS",
       str_detect(code, "MBM") ~ "MASTER OF BUSINESS MANAGEMENT",
+      str_detect(code, "BTM") ~ "BACHELOR OF TOURISM MANAGEMENT",
+      str_detect(code, "INS") ~ "BACHELOR OF SCIENCE IN INFORMATION SCIENCES",
+      str_detect(code, "SAS") ~ "BACHELOR OF CRIMINOLOGY AND PUBLIC SAFTETY",
       .default = "BACHELOR OF BUSINESS MANAGEMENT"
     )
   )
