@@ -1,0 +1,87 @@
+---
+title: "KARATINA UNIVERSITY"
+subtitle: "____________________"
+author: ""
+fontsize: 12pt
+mainfont: "Times New Roman"
+output: 
+  pdf: 
+    number-sections: false
+    fig-width: 5
+    fig-height: 3
+format-options:
+  pdf:
+    documentclass: article
+    include-in-header:
+      text: 
+        \usepackage{titling}
+        \usepackage[utf8]{inputenc}
+        \usepackage{amsmath}
+        \pretitle{\begin{center}\includegraphics[width=2in,height=2in]{logo.png}\LARGE\\}
+        \posttitle{\end{center}}
+params:
+  year: 2025
+  date: "January 11, 2025"
+  year_of_study: "THIRD YEAR"
+  academic_year: "2024/2025"
+  course_code: "BBM 300"
+  course_title: "Government Accounting"
+  exam_time: "1400 to 1600 hrs"
+  degree: "BACHELOR OF BUSINESS MANAGEMENT"
+---
+
+```{r, setup, include=FALSE}
+require(mosaic)   # Load additional packages here 
+knitr::opts_chunk$set(
+  tidy=FALSE,     # display code as typed
+  size="small")   # slightly smaller font for code
+```
+
+```{r, include=FALSE}
+# copy the R logo to the current directory
+file.copy(file.path(R.home("doc"), "html", "logo.png"), '.')
+```
+
+\center
+\textbf{UNIVERSITY REGULAR EXAMINATIONS}
+
+\center
+
+\center
+
+FOR THE DEGREE OF `r params$degree`
+
+\center
+
+
+\vspace{15mm}
+
+`r params$academic_year` ACADEMIC YEAR
+
+
+`r params$year_of_study_text`
+
+\vspace{5mm} 
+
+\textbf{COURSE CODE}: `r toupper(params$course_code)`
+
+\vspace{5mm} 
+
+\textbf{COURSE TITLE}: `r toupper(params$course_title)`
+
+\vspace{25mm}
+
+\textbf{DATE}: `r params$month` \hfill\ **Time**: `r params$mytime`
+
+
+\vspace{10mm} 
+
+\begin{flushleft}
+
+Instructions: 
+
+1. Attempt \textbf{QUESTION ONE} and choose \textbf{THREE (3)} additional questions. 
+
+
+\end{flushleft}
+

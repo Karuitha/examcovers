@@ -1,0 +1,93 @@
+---
+title: "**KARATINA UNIVERSITY**"
+subtitle: "**____________________**"
+author: ""
+mainfont: "Times New Roman"
+fontsize: 12pt
+date: ""
+output: 
+  pdf_document:
+    fig_height: 3
+    fig_width: 5
+  word_document:
+    fig_height: 3
+    fig_width: 5
+  html_document:
+    fig_height: 3
+    fig_width: 5
+header-includes:
+  - \usepackage{titling}
+  - \pretitle{\begin{center}
+    \includegraphics[width=2in,height=2in]{logo.png}\LARGE\\}
+  - \posttitle{\end{center}}
+  - \usepackage[utf8]{inputenc}
+  - \usepackage{pdflscape}
+  - \newcommand{\blandscape}{\begin{landscape}}
+  - \newcommand{\elandscape}{\end{landscape}}
+  - \usepackage{amsmath}
+params:
+  year: 2025
+  month: "January 11, 2025"
+  year_of_study_text: THIRD YEAR
+  academic_year: "2024/2025"
+  course_code:  BBM 300
+  course_title: Government Accounting
+  mytime: 1400 to 1600 hrs
+  degree: BACHELOR OF BUSINESS MANAGEMENT
+---
+
+```{r, setup, include=FALSE}
+require(mosaic)   # Load additional packages here 
+knitr::opts_chunk$set(
+  tidy=FALSE,     # display code as typed
+  size="small")   # slightly smaller font for code
+```
+
+```{r, include=FALSE}
+# copy the R logo to the current directory
+file.copy(file.path(R.home("doc"), "html", "logo.png"), '.')
+```
+
+\center
+\textbf{UNIVERSITY REGULAR EXAMINATIONS}
+
+\center
+
+\center
+
+FOR THE DEGREE OF `r params$degree`
+
+\center
+
+
+\vspace{15mm}
+
+`r params$academic_year` ACADEMIC YEAR
+
+
+`r params$year_of_study_text`
+
+\vspace{5mm} 
+
+\textbf{COURSE CODE}: `r toupper(params$course_code)`
+
+\vspace{5mm} 
+
+\textbf{COURSE TITLE}: `r toupper(params$course_title)`
+
+\vspace{25mm}
+
+\textbf{DATE}: `r format(params$month, format = '%d-%m-%Y')` \hfill\ **Time**: `r params$mytime`
+
+
+\vspace{10mm} 
+
+\begin{flushleft}
+
+Instructions: 
+
+1. Attempt \textbf{QUESTION ONE} and choose \textbf{THREE (3)} additional questions. 
+
+
+\end{flushleft}
+
